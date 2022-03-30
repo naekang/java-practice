@@ -2,10 +2,8 @@ package dev.naekang.java8to11;
 
 public class Foo {
     public static void main(String[] args) {
-
-        int baseNumber = 10;
-
-        RunSomething runSomething = number -> number + baseNumber;
+        Plus10 plus10 = new Plus10();
+        System.out.println(plus10.apply(1));
 
     }
 }

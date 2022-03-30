@@ -10,5 +10,7 @@ public class Foo {
         Function<Integer, Integer> multiply2AndPlus10 = plus10.compose(multiply2);
 
         System.out.println(multiply2AndPlus10.apply(2));
+
+        System.out.println(plus10.andThen(multiply2).apply(2));
     }
 }

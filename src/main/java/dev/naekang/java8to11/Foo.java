@@ -1,13 +1,13 @@
 package dev.naekang.java8to11;
 
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class Foo {
     public static void main(String[] args) {
-        Predicate<String> startsWithNaekang = (s) -> s.startsWith("naekang");
-        startsWithNaekang.negate();
+        UnaryOperator<Integer> plus10 = (i) -> i + 10;
+        UnaryOperator<Integer> multiply2 = (i) -> i * 2;
+
+        System.out.println(plus10.andThen(multiply2).apply(2));
+
     }
 }
